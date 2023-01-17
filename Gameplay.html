@@ -1,0 +1,89 @@
+<script>
+    var cookies = 0
+    var cpc = 1
+    var cost = 20
+    var max = 15
+    var max2 = 200
+    
+    function load_text() {
+        document.getElementById("cost_text").value = cost
+        document.getElementById("score_text").value = cookies
+        document.getElementById("cpc_text").value = cpc
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #everything {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cookie_div {
+            position: absolute;
+            top: 25%;
+            left: 35%;
+        }
+        #score_text {
+            position: absolute;
+            top: 45%;
+            left: 130%;
+        }
+        #load_button {
+            position: absolute;
+            top: 70%;
+            left: 35%;
+        }
+        #save_button {
+            position: absolute;
+            top: 70%;
+            left: 45%;
+        }
+        .cost_div {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+        }
+        .cpc_div {
+            position: absolute;
+            top: 55%;
+            left: 28.9%;
+        }
+        #upgrade_button {
+            position: absolute;
+            top: 60%;
+            left: 40%;
+        }
+    </style>
+</head>
+<script src="index.js"></script>
+<body onload="load_text()">
+    <div id="everything">
+        
+        <div class="cookie_div">
+            <a href=# onclick="add()"><img src="cookie-removebg-preview.png" alt=""></a>
+            <input type="score_text" disabled style="text-align: center;" id="score_text">
+        </div>
+        <br><br>
+        <button onclick="save()" id="save_button">Save</button>
+        <button onclick="load()" id="load_button">Load</button>
+        <br><br>
+        <div class="cost_div">
+            <label for="">cost:  </label>
+            <input type="text" disabled style="text-align: center;" id="cost_text">
+        </div>
+        <br><br>
+        <div class="cpc_div">
+            <label for="">Cookie Per Click:</label>
+            <input type="text" disabled style="text-align: center;" id="cpc_text">
+        </div>
+        <br><br>
+        <button onclick="upgrade()" id="upgrade_button">Upgrade</button>
+    </div>
+</body>
+</html>
